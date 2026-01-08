@@ -13,31 +13,20 @@
   {{/* Asset bundles */}}
   {{ $assets := newScratch }}
   {{ $algorithm := .Site.Params.fingerprintAlgorithm | default "sha256" }}
-  {{ $jsAppearance := resources.Get "js/appearance.js" }}
-  {{ $jsAppearance = $jsAppearance | resources.Minify | resources.Fingerprint $algorithm }}
-  <script
-    type="text/javascript"
-    src="{{ $jsAppearance.Permalink }}"
-    integrity="{{ $jsAppearance.Data.Integrity }}"
-  ></script>
-  {{ $cssScheme := resources.Get (printf "css/schemes/%s.css" (lower .Site.Params.colorScheme | default "congo")) }}
-  {{ if not $cssScheme }}
-    {{ $cssScheme = resources.Get "css/schemes/congo.css" }}
+  {{ $needAppearanceJS := or (not (.Site.Params.autoSwitchAppearance | default true)) (.Site.Params.footer.showAppearanceSwitcher | default false) }}
+  {{ if $needAppearanceJS }}
+    {{ $jsAppearance := resources.Get "js/appearance.js" }}
+    {{ $jsAppearance = $jsAppearance | resources.Minify | resources.Fingerprint $algorithm }}
+    <script
+        type="text/javascript"
+        src="{{ $jsAppearance.Permalink }}"
+        integrity="{{ $jsAppearance.Data.Integrity }}"
+    ></script>
   {{ end }}
-  {{ $assets.Add "css" (slice $cssScheme) }}
-  {{ $cssMain := resources.Get "css/compiled/main.css" }}
-  {{ $assets.Add "css" (slice $cssMain) }}
-  {{ $cssCustom := resources.Get "css/custom.css" }}
-  {{ if $cssCustom }}
-    {{ $assets.Add "css" (slice $cssCustom) }}
+  {{ $data := (dict "Site" .Site )}}
+  {{ with (templates.Defer (dict "key" "global" "data" $data)) }}
+    {{ partial "css.html" . }}
   {{ end }}
-  {{ $bundleCSS := $assets.Get "css" | resources.Concat "css/main.bundle.css" | resources.Minify | resources.Fingerprint $algorithm }}
-  <link
-    type="text/css"
-    rel="stylesheet"
-    href="{{ $bundleCSS.Permalink }}"
-    integrity="{{ $bundleCSS.Data.Integrity }}"
-  />
   {{ if .Site.Params.enableSearch | default false }}
     {{ $jsFuse := resources.Get "lib/fuse/fuse.min.js" }}
     {{ $jsSearch := resources.Get "js/search.js" }}

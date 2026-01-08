@@ -6,6 +6,7 @@ node_modules/
 # Generated files by hugo
 **/public/
 **/resources/_gen/
+hugo_stats.json
 
 # Executable may be added to repository
 hugo.exe

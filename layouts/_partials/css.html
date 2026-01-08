@@ -1,0 +1,16 @@
+{{ with resources.Get "css/main.css" }}
+  {{ $opts := dict "minify" (not hugo.IsDevelopment) }}
+  {{ with . | resources.ExecuteAsTemplate "main.css" $ | css.TailwindCSS $opts }}
+    {{ if $.Site.Params.inlineMainCSS | default false }}
+        <style> {{ .Content | safeCSS }}</style>
+    {{ else }}
+        {{ if hugo.IsDevelopment }}
+            <link rel="stylesheet" href="{{ .Permalink }}">
+        {{ else }}
+            {{ with . | fingerprint }}
+                <link rel="stylesheet" href="{{ .Permalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous">
+            {{ end }}
+        {{ end }}
+    {{ end }}
+  {{ end }}
+{{ end }}
