@@ -2,7 +2,9 @@
 
 @import "tailwindcss";
 @plugin "@tailwindcss/typography";
+/* include only classes used by the site in the generated CSS */
 @source "hugo_stats.json";
+@source not "themes/*";
 
 {{ $useClassesForDarkMode := or (not (.Site.Params.autoSwitchAppearance | default true)) (.Site.Params.footer.showAppearanceSwitcher | default false) }}
 {{ if $useClassesForDarkMode }}
