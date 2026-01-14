@@ -1,40 +1,40 @@
-/* Sapphire scheme */
+/* Sapphire scheme - Optimized with Tailwind v4 OKLCH colors */
 @theme {
-  --color-neutral: rgb(255, 255, 255);
+  --color-neutral: #fff;
   /* Slate */
-  --color-neutral-50: rgb(248, 250, 252);
-  --color-neutral-100: rgb(241, 245, 249);
-  --color-neutral-200: rgb(226, 232, 240);
-  --color-neutral-300: rgb(203, 213, 225);
-  --color-neutral-400: rgb(148, 163, 184);
-  --color-neutral-500: rgb(100, 116, 139);
-  --color-neutral-600: rgb(71, 85, 105);
-  --color-neutral-700: rgb(51, 65, 85);
-  --color-neutral-800: rgb(30, 41, 59);
-  --color-neutral-900: rgb(15, 23, 42);
-  --color-neutral-950: rgb(10, 10, 10);
+  --color-neutral-50: oklch(98.4% 0.003 247.858);
+  --color-neutral-100: oklch(96.8% 0.007 247.896);
+  --color-neutral-200: oklch(92.9% 0.013 255.508);
+  --color-neutral-300: oklch(86.9% 0.022 252.894);
+  --color-neutral-400: oklch(70.4% 0.04 256.788);
+  --color-neutral-500: oklch(55.4% 0.046 257.417);
+  --color-neutral-600: oklch(44.6% 0.043 257.281);
+  --color-neutral-700: oklch(37.2% 0.044 257.287);
+  --color-neutral-800: oklch(27.9% 0.041 260.031);
+  --color-neutral-900: oklch(20.8% 0.042 265.755);
+  --color-neutral-950: oklch(14.5% 0 0);
   /* Indigo */
-  --color-primary-50: rgb(238, 242, 255);
-  --color-primary-100: rgb(224, 231, 255);
-  --color-primary-200: rgb(199, 210, 254);
-  --color-primary-300: rgb(165, 180, 252);
-  --color-primary-400: rgb(129, 140, 248);
-  --color-primary-500: rgb(99, 102, 241);
-  --color-primary-600: rgb(79, 70, 229);
-  --color-primary-700: rgb(67, 56, 202);
-  --color-primary-800: rgb(55, 48, 163);
-  --color-primary-900: rgb(49, 46, 129);
-  --color-primary-950: rgb(30, 27, 75);
+  --color-primary-50: oklch(96.2% 0.018 272.314);
+  --color-primary-100: oklch(93% 0.034 272.788);
+  --color-primary-200: oklch(87% 0.065 274.039);
+  --color-primary-300: oklch(78.5% 0.115 274.713);
+  --color-primary-400: oklch(67.3% 0.182 276.935);
+  --color-primary-500: oklch(58.5% 0.233 277.117);
+  --color-primary-600: oklch(51.1% 0.262 276.966);
+  --color-primary-700: oklch(45.7% 0.24 277.023);
+  --color-primary-800: oklch(39.8% 0.195 277.366);
+  --color-primary-900: oklch(35.9% 0.144 278.697);
+  --color-primary-950: oklch(25.7% 0.09 281.288);
   /* Pink */
-  --color-secondary-50: rgb(253, 242, 248);
-  --color-secondary-100: rgb(252, 231, 243);
-  --color-secondary-200: rgb(251, 207, 232);
-  --color-secondary-300: rgb(249, 168, 212);
-  --color-secondary-400: rgb(244, 114, 182);
-  --color-secondary-500: rgb(236, 72, 153);
-  --color-secondary-600: rgb(219, 39, 119);
-  --color-secondary-700: rgb(190, 24, 93);
-  --color-secondary-800: rgb(157, 23, 77);
-  --color-secondary-900: rgb(131, 24, 67);
-  --color-secondary-950: rgb(80, 7, 36);
+  --color-secondary-50: oklch(97.1% 0.014 343.198);
+  --color-secondary-100: oklch(94.8% 0.028 342.258);
+  --color-secondary-200: oklch(89.9% 0.061 343.231);
+  --color-secondary-300: oklch(82.3% 0.12 346.018);
+  --color-secondary-400: oklch(71.8% 0.202 349.761);
+  --color-secondary-500: oklch(65.6% 0.241 354.308);
+  --color-secondary-600: oklch(59.2% 0.249 0.584);
+  --color-secondary-700: oklch(52.5% 0.223 3.958);
+  --color-secondary-800: oklch(45.9% 0.187 3.815);
+  --color-secondary-900: oklch(40.8% 0.153 2.432);
+  --color-secondary-950: oklch(28.4% 0.109 3.907);
 }
