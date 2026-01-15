@@ -4,8 +4,12 @@
   {{ end }} flex flex-col items-center justify-center text-center"
 >
   {{ partial "profile.html" }}
-  <section class="prose dark:prose-invert">{{ .Content | emojify }}</section>
+  {{ with .Content }}
+  <section class="prose dark:prose-invert">{{ . | emojify }}</section>
+  {{ end }}
 </article>
+{{ with partial "recent-articles.html" . }}
 <section>
-  {{ partial "recent-articles.html" . }}
+  {{ . }}
 </section>
+{{ end }}
