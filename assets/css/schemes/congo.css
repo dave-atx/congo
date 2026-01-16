@@ -1,40 +1,40 @@
-/* Congo scheme - Optimized with Tailwind v4 OKLCH colors */
+/* Congo scheme - OKLCH colors with consistent hue per palette */
 @theme {
-  --color-neutral: #fff;
-  /* Zinc */
-  --color-neutral-50: oklch(98.5% 0 0);
-  --color-neutral-100: oklch(96.7% 0.001 286.375);
-  --color-neutral-200: oklch(92% 0.004 286.32);
-  --color-neutral-300: oklch(87.1% 0.006 286.286);
-  --color-neutral-400: oklch(70.5% 0.015 286.067);
-  --color-neutral-500: oklch(55.2% 0.016 285.938);
-  --color-neutral-600: oklch(44.2% 0.017 285.786);
-  --color-neutral-700: oklch(37% 0.013 285.805);
-  --color-neutral-800: oklch(27.4% 0.006 286.033);
-  --color-neutral-900: oklch(21% 0.006 285.885);
-  --color-neutral-950: oklch(14.1% 0.005 285.823);
-  /* Violet */
-  --color-primary-50: oklch(96.9% 0.016 293.756);
-  --color-primary-100: oklch(94.3% 0.029 294.588);
-  --color-primary-200: oklch(89.4% 0.057 293.283);
-  --color-primary-300: oklch(81.1% 0.111 293.571);
-  --color-primary-400: oklch(70.2% 0.183 293.541);
-  --color-primary-500: oklch(60.6% 0.25 292.717);
-  --color-primary-600: oklch(54.1% 0.281 293.009);
-  --color-primary-700: oklch(49.1% 0.27 292.581);
-  --color-primary-800: oklch(43.2% 0.232 292.759);
-  --color-primary-900: oklch(38% 0.189 293.745);
-  --color-primary-950: oklch(28.3% 0.141 291.089);
-  /* Fuchsia */
-  --color-secondary-50: oklch(97.7% 0.017 320.058);
-  --color-secondary-100: oklch(95.2% 0.037 318.852);
-  --color-secondary-200: oklch(90.3% 0.076 319.62);
-  --color-secondary-300: oklch(83.3% 0.145 321.434);
-  --color-secondary-400: oklch(74% 0.238 322.16);
-  --color-secondary-500: oklch(66.7% 0.295 322.15);
-  --color-secondary-600: oklch(59.1% 0.293 322.896);
-  --color-secondary-700: oklch(51.8% 0.253 323.949);
-  --color-secondary-800: oklch(45.2% 0.211 324.591);
-  --color-secondary-900: oklch(40.1% 0.17 325.612);
-  --color-secondary-950: oklch(29.3% 0.136 325.661);
+  --color-neutral: oklch(100% 0 0);
+  /* Zinc - hue: 281° */
+  --color-neutral-50: oklch(98.5% 0 281);
+  --color-neutral-100: oklch(96.7% 0 281);
+  --color-neutral-200: oklch(92% 0.004 281);
+  --color-neutral-300: oklch(87.1% 0.005 281);
+  --color-neutral-400: oklch(71.2% 0.013 281);
+  --color-neutral-500: oklch(55.2% 0.014 281);
+  --color-neutral-600: oklch(44.2% 0.015 281);
+  --color-neutral-700: oklch(37% 0.012 281);
+  --color-neutral-800: oklch(27.4% 0.005 281);
+  --color-neutral-900: oklch(21% 0.006 281);
+  --color-neutral-950: oklch(13% 0.027 281);
+  /* Violet - hue: 293° */
+  --color-primary-50: oklch(96.9% 0.016 293);
+  --color-primary-100: oklch(94.3% 0.028 293);
+  --color-primary-200: oklch(89.4% 0.055 293);
+  --color-primary-300: oklch(81.1% 0.101 293);
+  --color-primary-400: oklch(70.9% 0.159 293);
+  --color-primary-500: oklch(60.6% 0.219 293);
+  --color-primary-600: oklch(54.1% 0.247 293);
+  --color-primary-700: oklch(49.1% 0.241 293);
+  --color-primary-800: oklch(43.2% 0.211 293);
+  --color-primary-900: oklch(38% 0.178 293);
+  --color-primary-950: oklch(28.3% 0.135 293);
+  /* Fuchsia - hue: 322° */
+  --color-secondary-50: oklch(97.7% 0.017 322);
+  --color-secondary-100: oklch(95.2% 0.036 322);
+  --color-secondary-200: oklch(90.3% 0.073 322);
+  --color-secondary-300: oklch(83.3% 0.132 322);
+  --color-secondary-400: oklch(74.8% 0.207 322);
+  --color-secondary-500: oklch(66.7% 0.259 322);
+  --color-secondary-600: oklch(59.1% 0.257 322);
+  --color-secondary-700: oklch(51.8% 0.226 322);
+  --color-secondary-800: oklch(45.2% 0.192 322);
+  --color-secondary-900: oklch(40.1% 0.16 322);
+  --color-secondary-950: oklch(29.3% 0.131 322);
 }
