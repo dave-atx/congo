@@ -1,0 +1,8 @@
+# Test site for tree-shaking verification
+theme = "congo"
+baseURL = "https://example.org/"
+defaultContentLanguage = "en"
+
+[build]
+  [build.buildStats]
+    enable = true

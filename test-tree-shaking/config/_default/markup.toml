@@ -1,0 +1,13 @@
+# Markup configuration for tree-shaking tests
+# noClasses = false enables class-based syntax highlighting (uses .chroma classes)
+
+[goldmark]
+[goldmark.renderer]
+  unsafe = true
+
+[highlight]
+  noClasses = false
+
+[tableOfContents]
+  startLevel = 2
+  endLevel = 3
