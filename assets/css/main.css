@@ -1,11 +1,10 @@
 /*! Congo v2.12.2 | MIT License | https://github.com/jpanther/congo */
 
-@import "tailwindcss";
+@import "tailwindcss" source(none);
 @plugin "@tailwindcss/typography";
 /* include only classes used by the site in the generated CSS */
-@source not "*";
 @source "hugo_stats.json";
-@source "public/**/*";
+@source "{{ site.Params.publishDir | default "public" }}/**/*";
 
 {{ $useClassesForDarkMode := or (not (.Site.Params.autoSwitchAppearance | default true)) (.Site.Params.footer.showAppearanceSwitcher | default false) }}
 {{ if $useClassesForDarkMode }}
