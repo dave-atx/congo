@@ -13,7 +13,11 @@
 {{ end }}
 
 /* -- begin tailwind prose configuration -- */
-@utility prose {
+/* Color theme as a NAMED MODIFIER — apply as class="prose prose-congo".
+   Redefining @utility prose loses to the typography plugin's default theme on
+   source order (the plugin emits its default .prose block later, at equal
+   specificity). A named modifier emits after the default, so it wins. */
+@utility prose-congo {
   --tw-prose-body: var(--color-neutral-700);
   --tw-prose-headings: var(--color-neutral-800);
   --tw-prose-lead: var(--color-neutral-500);
@@ -46,7 +50,10 @@
   --tw-prose-invert-pre-bg: var(--color-neutral-700);
   --tw-prose-invert-th-borders: var(--color-neutral-500);
   --tw-prose-invert-td-borders: var(--color-neutral-700);
+}
 
+/* Structural prose styling — applies to every .prose, theme-independent */
+@utility prose {
   a {
     text-decoration: underline;
     text-decoration-color: var(--color-primary-300);
